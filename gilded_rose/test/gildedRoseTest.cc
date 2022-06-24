@@ -36,7 +36,7 @@ TEST(gilded_rose_test, noItems_yields_noItems) {
 TEST(gilded_rose_test, twoItems_yields_twoItems) {
     vector<Item> items;
     items.push_back(Item("Aged Brie", 0, 47));
-    items.push_back(Item("Foo", 0, 3));
+    items.push_back(Item("AllOtherNames", 0, 3));
     GildedRose app(items);
     app.updateQuality();
 
@@ -44,7 +44,7 @@ TEST(gilded_rose_test, twoItems_yields_twoItems) {
     EXPECT_EQ(items[0].name,    "Aged Brie");
     EXPECT_EQ(items[0].sellIn,  -1);
     EXPECT_EQ(items[0].quality, 49);
-    EXPECT_EQ(items[1].name,    "Foo");
+    EXPECT_EQ(items[1].name,    "AllOtherNames");
     EXPECT_EQ(items[1].sellIn,  -1);
     EXPECT_EQ(items[1].quality, 1);
 }
@@ -329,54 +329,54 @@ INSTANTIATE_TEST_SUITE_P(
             Item("Sulfuras, Hand of Ragnaros", -1, 700)
         },
         TestDataStruct {
-            "Foo_Negative1_0_DecrementsSellIn",
-            Item("Foo", -1, 0),
-            Item("Foo", -2, 0)
+            "AllOtherNames_Negative1_0_DecrementsSellIn",
+            Item("AllOtherNames", -1, 0),
+            Item("AllOtherNames", -2, 0)
         },
         TestDataStruct {
-            "Foo_Negative1_1_DecrementsSellInAndQuality",
-            Item("Foo", -1, 1),
-            Item("Foo", -2, 0)
+            "AllOtherNames_Negative1_1_DecrementsSellInAndQuality",
+            Item("AllOtherNames", -1, 1),
+            Item("AllOtherNames", -2, 0)
         },
         TestDataStruct {
-            "Foo_0_0_DecrementsSellIn",
-            Item("Foo", 0, 0),
-            Item("Foo", -1, 0)
+            "AllOtherNames_0_0_DecrementsSellIn",
+            Item("AllOtherNames", 0, 0),
+            Item("AllOtherNames", -1, 0)
         },
         TestDataStruct {
-            "Foo_0_1_DecrementsSellInAndQuality",
-            Item("Foo", 0, 1),
-            Item("Foo", -1, 0)
+            "AllOtherNames_0_1_DecrementsSellInAndQuality",
+            Item("AllOtherNames", 0, 1),
+            Item("AllOtherNames", -1, 0)
         },
         TestDataStruct {
-            "Foo_0_2_DecrementsSellInAndDoubleDecrementsQuality",
-            Item("Foo", 0, 2),
-            Item("Foo", -1, 0)
+            "AllOtherNames_0_2_DecrementsSellInAndDoubleDecrementsQuality",
+            Item("AllOtherNames", 0, 2),
+            Item("AllOtherNames", -1, 0)
         },
         TestDataStruct {
-            "Foo_0_3_DecrementsSellInAndDoubleDecrementsQuality",
-            Item("Foo", 0, 3),
-            Item("Foo", -1, 1)
+            "AllOtherNames_0_3_DecrementsSellInAndDoubleDecrementsQuality",
+            Item("AllOtherNames", 0, 3),
+            Item("AllOtherNames", -1, 1)
         },
         TestDataStruct {
-            "Foo_1_0_DecrementsSellIn",
-            Item("Foo", 1, 0),
-            Item("Foo", 0, 0)
+            "AllOtherNames_1_0_DecrementsSellIn",
+            Item("AllOtherNames", 1, 0),
+            Item("AllOtherNames", 0, 0)
         },
         TestDataStruct {
-            "Foo_1_1_DecrementsSellInAndQuality",
-            Item("Foo", 1, 1),
-            Item("Foo", 0, 0)
+            "AllOtherNames_1_1_DecrementsSellInAndQuality",
+            Item("AllOtherNames", 1, 1),
+            Item("AllOtherNames", 0, 0)
         },
         TestDataStruct {
-            "Foo_2_0_DecrementsSellIn",
-            Item("Foo", 2, 0),
-            Item("Foo", 1, 0)
+            "AllOtherNames_2_0_DecrementsSellIn",
+            Item("AllOtherNames", 2, 0),
+            Item("AllOtherNames", 1, 0)
         },
         TestDataStruct {
-            "Foo_2_1_DecrementsSellInAndQuality",
-            Item("Foo", 2, 1),
-            Item("Foo", 1, 0)
+            "AllOtherNames_2_1_DecrementsSellInAndQuality",
+            Item("AllOtherNames", 2, 1),
+            Item("AllOtherNames", 1, 0)
         }
     ),
     [](const testing::TestParamInfo<GildedRoseTest::ParamType>& test_data) {
